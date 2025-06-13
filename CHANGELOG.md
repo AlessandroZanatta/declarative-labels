@@ -1,3 +1,10 @@
+## [1.0.2-dev.1](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.1...v1.0.2-dev.1) (2025-06-13)
+
+
+### Bug Fixes
+
+* experiment with no top-level error handling in action ([82a608e](https://github.com/AlessandroZanatta/declarative-labels/commit/82a608e0cd12d46fdadc9cf928be39f9872ca0fd))
+
 ## [1.0.1](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.0...v1.0.1) (2025-06-13)
 
 
