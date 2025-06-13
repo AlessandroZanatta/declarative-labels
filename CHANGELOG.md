@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.3...v1.0.4) (2025-06-13)
+
+
+### Bug Fixes
+
+* allow semantic-releases to update README.md on Git ([80978e5](https://github.com/AlessandroZanatta/declarative-labels/commit/80978e5335c0847e170a4af04a2922e0d87f5c8e))
+
 ## [1.0.3](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.2...v1.0.3) (2025-06-13)
 
 

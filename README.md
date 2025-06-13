@@ -29,7 +29,7 @@ on:
 
 jobs:
   steps:
-    - uses: alessandrozanatta/declarative-labels@v1.0.1
+    - uses: alessandrozanatta/declarative-labels@v1.0.4
       with:
         manifest: .github/labels.yaml
         gitea: true # <-- set this to true if running on Gitea!
