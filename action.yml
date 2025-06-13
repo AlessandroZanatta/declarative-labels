@@ -1,0 +1,29 @@
+---
+name: "Declarative labels action"
+description: "Syncs the repository labels with the provided ones"
+
+inputs:
+  manifest:
+    description: Path of labels YAML file
+    required: false
+    default: ".github/labels.yaml"
+  gitea:
+    description: Whether to use the Gitea API for labels removal
+    required: false
+    default: "false"
+  github_token:
+    description: A GitHub token to execute the action with
+    required: false
+    default: ${{ github.token }}
+  repo:
+    description: The owner and repository name
+    required: false
+    default: ${{ github.repository }}
+  prune:
+    description: Remove unmanaged labels from repository
+    required: false
+    default: "false"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"

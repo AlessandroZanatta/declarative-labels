@@ -1,0 +1,27 @@
+---
+name: autofix.ci
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: yarn
+
+      - name: Lint with prettier
+        run: |
+          yarn install --frozen-lockfile
+          yarn prettier . --write
+
+      - uses: autofix-ci/action@v1
+        with:
+          commit-message: "Apply Prettier format"
