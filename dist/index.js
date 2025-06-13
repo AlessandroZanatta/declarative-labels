@@ -71,7 +71,7 @@ async function run() {
                 if (wantedLabels.get(l.name))
                     return;
                 if (gitea) {
-                    const giteaRemoveLabelPath = `/repos/${owner}/${repo}/${l.id}`;
+                    const giteaRemoveLabelPath = `/repos/${owner}/${repo}/labels/${l.id}`;
                     await octokit.request({
                         method: "DELETE",
                         url: giteaRemoveLabelPath,
@@ -84,6 +84,7 @@ async function run() {
                         name: l.name,
                     });
                 }
+                core.info(`Correctly deleted "${l.name}" label`);
             }));
         }
         // Create or update tracked labels
@@ -97,6 +98,7 @@ async function run() {
                     repo,
                     ...l,
                 });
+                core.info(`Correctly added "${l.name}" label!`);
             }
             else if (existingLabel.color != l.color ||
                 existingLabel.description != l.description) {
@@ -105,15 +107,18 @@ async function run() {
                     repo,
                     ...l,
                 });
+                core.info(`Correctly updated "${l.name}" description and/or color!`);
+            }
+            else {
+                core.info(`Skipping update of "${l.name}", already up-to-date!`);
             }
         }));
     }
     catch (error) {
-        core.error(`Failed: ${error.message}`);
-        throw new Error(`Failed: ${error.message}`);
+        core.error(`Failed: ${error}`);
+        throw new Error(`Failed: ${error}`);
     }
 }
-run();
 //# sourceMappingURL=main.js.map
 
 /***/ }),
