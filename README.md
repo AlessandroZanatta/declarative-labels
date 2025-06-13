@@ -8,11 +8,15 @@ You can define your labels in a separate YAML file, such as:
 ---
 - name: bug
   description: Something broke :(
-  color: e11d21
+  color: "e11d21"
 - name: documentation
   description: Improvements to the wiki!
-  color: 0052cc
+  color: "0052cc"
 ```
+
+> [!NOTE]  
+> Ensure you are wrapping the color field in quotes to ensure they are interpreted as a **string**!
+> Otherwise, [bad things may happen!](https://ruudvanasseldonk.com/2023/01/11/the-yaml-document-from-hell)
 
 Example usage:
 
@@ -25,7 +29,7 @@ on:
 
 jobs:
   steps:
-    - uses: alessandrozanatta/declarative-labels@v1
+    - uses: alessandrozanatta/declarative-labels@v1.0.0
       with:
         manifest: .github/labels.yaml
         gitea: true # <-- set this to true if running on Gitea!

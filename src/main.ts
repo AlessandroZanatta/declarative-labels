@@ -36,7 +36,7 @@ export async function run(): Promise<void> {
         allLabels.map(async (l) => {
           if (wantedLabels.get(l.name)) return;
           if (gitea) {
-            const giteaRemoveLabelPath = `/repos/${owner}/${repo}/${l.id}`;
+            const giteaRemoveLabelPath = `/repos/${owner}/${repo}/labels/${l.id}`;
             await octokit.request({
               method: "DELETE",
               url: giteaRemoveLabelPath,
@@ -48,6 +48,8 @@ export async function run(): Promise<void> {
               name: l.name,
             });
           }
+
+          core.info(`Correctly deleted "${l.name}" label`);
         }),
       );
     }
@@ -64,6 +66,7 @@ export async function run(): Promise<void> {
             repo,
             ...l,
           });
+          core.info(`Correctly added "${l.name}" label!`);
         } else if (
           existingLabel.color != l.color ||
           existingLabel.description != l.description
@@ -73,13 +76,14 @@ export async function run(): Promise<void> {
             repo,
             ...l,
           });
+          core.info(`Correctly updated "${l.name}" description and/or color!`);
+        } else {
+          core.info(`Skipping update of "${l.name}", already up-to-date!`);
         }
       }),
     );
   } catch (error: any) {
-    core.error(`Failed: ${error.message}`);
-    throw new Error(`Failed: ${error.message}`);
+    core.error(`Failed: ${error}`);
+    throw new Error(`Failed: ${error}`);
   }
 }
-
-run();
