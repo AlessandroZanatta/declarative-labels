@@ -70,11 +70,20 @@ export async function run(): Promise<void> {
         existingLabel.color != l.color ||
         existingLabel.description != l.description
       ) {
-        await octokit.issues.updateLabel({
-          owner,
-          repo,
-          ...l,
-        });
+        if (gitea) {
+          const giteaPatchLabelpath = `/repos/${owner}/${repo}/labels/${existingLabel.id}`;
+          await octokit.request({
+            method: "PATCH",
+            url: giteaPatchLabelpath,
+            data: l,
+          });
+        } else {
+          await octokit.issues.updateLabel({
+            owner,
+            repo,
+            ...l,
+          });
+        }
         core.info(`Correctly updated "${l.name}" description and/or color!`);
       } else {
         core.info(`Skipping update of "${l.name}", already up-to-date!`);
