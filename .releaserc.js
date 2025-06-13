@@ -12,7 +12,8 @@ module.exports = {
     [
       "@semantic-release/exec",
       {
-        prepareCmd: "yarn install --frozen-lockfile && yarn build",
+        prepareCmd:
+          "yarn install --frozen-lockfile && yarn build && node ./scripts/update-readme-version.js ${nextRelease.version}",
       },
     ],
     [
@@ -23,11 +24,6 @@ module.exports = {
           "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
-    [
-      "@semantic-release/github",
-      {
-        assets: [{ path: "dist/**", label: "Distribution Files" }],
-      },
-    ],
+    ["@semantic-release/github"],
   ],
 };
