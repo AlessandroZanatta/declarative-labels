@@ -1,8 +1,9 @@
-## [1.0.2-dev.2](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.2-dev.1...v1.0.2-dev.2) (2025-06-13)
+## [1.0.2](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.1...v1.0.2) (2025-06-13)
+
 
 ### Bug Fixes
 
-- use correct API for Gitea label patches ([2f29b58](https://github.com/AlessandroZanatta/declarative-labels/commit/2f29b58c18823d60a89725ecdf01ad95cf2282f7))
+* experiment with no top-level error handling in action ([82a608e](https://github.com/AlessandroZanatta/declarative-labels/commit/82a608e0cd12d46fdadc9cf928be39f9872ca0fd))
 
 ## [1.0.2-dev.1](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.1...v1.0.2-dev.1) (2025-06-13)
 
