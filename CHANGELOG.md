@@ -1,3 +1,10 @@
+## [1.0.5-dev.1](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.4...v1.0.5-dev.1) (2025-06-14)
+
+
+### Bug Fixes
+
+* update package.json version when releasing ([df4ac79](https://github.com/AlessandroZanatta/declarative-labels/commit/df4ac79126853ff35617a36b10398b60a087364f))
+
 ## [1.0.4](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.3...v1.0.4) (2025-06-13)
 
 
