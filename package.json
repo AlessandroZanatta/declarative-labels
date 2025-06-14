@@ -1,6 +1,6 @@
 {
   "name": "declarative-labels",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Syncs the labels of a given repository using a YAML versioned file!",
   "private": true,
   "main": "dist/index.js",

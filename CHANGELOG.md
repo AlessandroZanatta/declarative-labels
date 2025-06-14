@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.4...v1.0.5) (2025-06-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @octokit/rest to v22 ([0d60d21](https://github.com/AlessandroZanatta/declarative-labels/commit/0d60d21998928d5572d3da5df06bbdc1c08c402e))
+* **deps:** update dependency zod to v3.25.64 ([183edeb](https://github.com/AlessandroZanatta/declarative-labels/commit/183edeb724b7663483005669c0039af68b4009c1))
+
 ## [1.0.4](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.3...v1.0.4) (2025-06-13)
 
 
