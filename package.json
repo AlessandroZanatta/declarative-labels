@@ -2,6 +2,7 @@
   "name": "declarative-labels",
   "version": "1.0.0",
   "description": "Syncs the labels of a given repository using a YAML versioned file!",
+  "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -32,6 +33,7 @@
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.3",
+    "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.3",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.0.0",
