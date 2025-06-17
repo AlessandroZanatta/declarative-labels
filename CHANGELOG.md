@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.5...v1.0.6) (2025-06-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to v3.25.67 ([422cdda](https://github.com/AlessandroZanatta/declarative-labels/commit/422cdda543fe5dc6e1d094fdec1743d19aa3baec))
+
 ## [1.0.5](https://github.com/AlessandroZanatta/declarative-labels/compare/v1.0.4...v1.0.5) (2025-06-14)
 
 
